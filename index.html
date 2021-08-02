@@ -13,6 +13,7 @@
       .container {
         padding-left: 10%;
         padding-right: 10%;
+        padding-bottom: 5%;
       }
       .row {
         display: flex;
@@ -50,6 +51,21 @@
       }
       .col-md-12 {
         width: 100%;
+      }
+      .acc-first {
+        background-color: rgb(23,162,184, 0.3);
+        padding: 20px;
+      }
+      .acc-second {
+        background-color: rgb(108,117,125, 0.3);
+        padding: 20px;
+      }
+      .acc-third {
+        background-color: rgb(220,53,69, 0.3);
+        padding: 20px;
+      }
+      .accordian-body {
+        background-color: rgb(213, 213, 213);
       }
        @media only screen and (max-width: 800px) {
          .container {
@@ -111,6 +127,8 @@
         width: 50px !important;
         height: 5px !important;
         background: #F352B2;
+        margin: 5px;
+        padding: 0;
       }
       .about-image, .about-product {
         display: flex;
@@ -147,8 +165,8 @@
           </div>
           <div class="col-md-6 about-product">
             <div class="container">
-              <h2>AnOxident balance mutes Gēls</h2>
-              <p class="line"></p>
+              <h2>AnOxident balance mutes Gēls <p class="line"></p></h2>
+             
               <p><b>- AnOxident balance® ir īpaši piemērots personām ar diabētu un tiem, kuriem ikdienā
               patīk našķoties ar saldumiem.</b></p>
               
@@ -168,57 +186,38 @@
 
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-              aria-expanded="true" aria-controls="collapseOne">
-              Lietošanas norādījumi
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
+          <h2 class="acc-first">Lietošanas norādījumi</h2>
             <div class="accordion-body">
               - Ar tīru pirkstu pirms gulētiešanas kārtīgi uzklājiet gēlu uz
               augšējās un apakšējās smaganu daļas, mēles, vai zem protēzēm. Ja nepieciešams, var
               uzklāt arī nakts laikā. Lai iegūtu maksimālu efektu - neskalot! Lietot pēc
               nepieciešamības 24 stundas diennaktī.
             </div>
-          </div>
         </div>
         <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-              aria-expanded="false" aria-controls="collapseTwo">
-              Sastāvs
-            </button>
+          <h2 class="acc-second">
+            Sastāvs
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample">
+          
             <div class="accordion-body">
               Ksilīts, Nātrija poliakrilāts, poliakrilskābe, piena Olbaltumvielu ekstrakts,
               Cucumis Melo, piena substrāts, Lactoferrin- NFQ®, Apo Lactoferrin-NFQ®, Aloe
               Barbadensis lapu pulveris.
             </div>
-          </div>
         </div>
         <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-              aria-expanded="false" aria-controls="collapseThree">
-              Brīdinājums par alerģiju
-            </button>
+          <h2 class="acc-third">
+            Brīdinājums par alerģiju
           </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-            data-bs-parent="#accordionExample">
             <div class="accordion-body">
               Produkti satur piena daļiņas. Ja nepieciešams, pirms
               lietošanas konsultēties ar ārstu.
             </div>
-          </div>
         </div>
       </div>
 
       <div class="row-col mt-5">
-        <h1>Galvenās īpašības <p class="line" style="background-color: #5C82B7; margin-top: 0"></p></h1>
+        <h1>Galvenās īpašības <p class="line" style="background-color: #5C82B7;"></p></h1>
         <div class="col-md-12 mt-4">
           <ul>
             <li><b>AnOxident balance®</b> ir unikāla un vienīgā produktu līnija mutes veselībai, kas īpaši paredzēta personām ar diabētu un
