@@ -1,198 +1,345 @@
 <!DOCTYPE html>
 <html lang="lv">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AnOxident balance®</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
-      a[type="button"] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-      }
-      button[type="button"] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-      }
-      .wrapper {
-        margin-top: 50px;
-      }
-      .logo-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      .line {
-        color: #EE207B;
-        width: 50px !important;
-        height: 5px !important;
-        background: #F352B2;
-      }
-      .about-image, .about-product {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      .about-product {
-        background-color: rgba(234, 236, 240, 0.7);
-      }
-      @media only screen and (max-width: 800px) {
-        .about-product {
-          padding-top: 50px;
-          padding-bottom: 50px;
-          margin-top: 50px;
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        .o-container a {
+            text-decoration: none;
+            color: black;
         }
-        .other-products .col-md-4 {
+
+        .o-container {
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-bottom: 5%;
+        }
+
+        .o-row {
+            display: flex;
+        }
+
+        .o-img-fluid {
+            max-width: 100vw;
+        }
+
+        .o-mt-8 {
+            margin-top: 100px;
+        }
+
+        .o-mt-5 {
             margin-top: 50px;
-          }
-      }
+        }
 
+        .o-mt-3 {
+            margin-top: 30px;
+        }
+
+        .o-text-center {
+            text-align: center;
+        }
+
+        .o-mb-5 {
+            padding-bottom: 7%;
+        }
+
+        .o-btn {
+            border: 1px solid black;
+            padding: 8px 30px 8px 30px;
+        }
+
+        .o-btn:hover {
+            transition: 0.5s ease-in-out;
+            background-color: black;
+            color: whitesmoke;
+        }
+
+        .o-col-md-4 {
+            text-align: center;
+            width: 60%;
+        }
+
+        .o-col-md-6 {
+            width: 50%;
+        }
+
+        .o-col-md-12 {
+            width: 100%;
+        }
+
+        .o-acc-first {
+            text-align: center;
+            background-color: rgb(23, 162, 184, 0.3);
+            padding: 20px;
+        }
+
+        .o-acc-second {
+            text-align: center;
+            background-color: rgb(108, 117, 125, 0.3);
+            padding: 20px;
+        }
+
+        .o-acc-third {
+            text-align: center;
+            background-color: rgb(220, 53, 69, 0.3);
+            padding: 20px;
+        }
+
+        .o-accordion {
+            display: flex;
+        }
+
+        .o-accordion-item {
+            width: 35%;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .o-container {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .o-row {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .o-img-fluid {
+                width: 60vw;
+            }
+
+            .o-col-md-4 {
+                text-align: center;
+                width: 100%;
+            }
+
+            .o-col-md-6 {
+                width: 100%;
+            }
+
+            .o-accordion {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .o-accordion-item {
+                width: 100%;
+            }
+
+            .o-about-product {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                margin-top: 50px;
+            }
+
+            .o-other-products .col-md-4 {
+                margin-top: 50px;
+            }
+        }
+
+        .o-product {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .o-container a[type="button"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .o-container button[type="button"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .o-wrapper {
+            margin-top: 50px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .o-logo-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .o-line {
+            color: #EE207B;
+            width: 50px !important;
+            height: 5px !important;
+            background: #F352B2;
+            margin: 5px;
+            padding: 0;
+        }
+
+        .o-about-image,
+        .o-about-product {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .o-about-product {
+            background-color: rgba(234, 236, 240, 0.7);
+        }
+
+        .o-row-col ul li {
+            margin-top: 5px;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .o-about-product {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                margin-top: 50px;
+            }
+
+            .o-other-products .col-md-4 {
+                margin-top: 50px;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div class="container wrapper">
-      <div class="logo-wrapper">
-        <img src="./assets/asset_1.png" width="70%" class="img-fluid" alt="AnOxident balance®">
-      </div>
+</head>
 
-      <div class="product mt-5 mb-5">
-        <div class="row">
-          <div class="col-md-6 about-image">
-            <img src="./assets/asset_4.png" width="60%" class="img-fluid" alt="AnOxident balance mutes Gēls">
-          </div>
-          <div class="col-md-6 about-product">
-            <div class="container">
-              <h2>AnOxident balance skalojamais līdzeklis</h2>
-              <p class="line"></p>
-              <p><b>- AnOxident balance® ir īpaši piemērots personām ar diabētu un tiem, kuriem
-              ikdienā patīk našķoties ar saldumiem.</b></p>
-              
-              <p><b> - AnOxident balance® mutes skalojamā sastāvā nav spirts, tāpēc tam piemīt
-              maiga un neitrāla garša, kas neizraisa kodīgu sajūtu mutē.</b></p>
-              
-              <p><b> - AnOxident balance® mutes skalojamais līdzeklis regulē un samazina cukura
-              līmeni siekalās, iznīcina mutē kaitīgās baktērijas un neļauj veidoties zobu
-              aplikumam un kariesam.</b></p>
-                          
-              <a href="#" type="button" class="btn btn-outline-secondary mt-3">PĒRC TAGAD</a>
-            </div>
-          </div>
+<body>
+    <div class="o-container o-wrapper">
+        <div class="o-logo-wrapper">
+            <img src="./assets/asset_1.png" width="40%" class="img-fluid" alt="AnOxident balance®">
         </div>
-      </div>
 
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-              aria-expanded="true" aria-controls="collapseOne">
-              Lietošanas norādījumi
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              - Pēc zobu tīrīšanas ar AnOxident balance® zobu pastu
-              izskalojiet muti ar AnOxident balance® mutes skalojamo šķīdumu. Drīkst
-              atkārtoti skalot jebkurā diennakts laikā, lai iegūtu maksimālu mutes
-              svaigumu un komfortu. Lieko šķīduma daudzumu izspļaut. Neskalot muti ar
-              ūdeni!
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-              aria-expanded="false" aria-controls="collapseTwo">
-              Sastāvs
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              Ksilīts, Nātrija mono-fluorfosfāts 1,14% w / w (1500 ppm fluora
-              jonu), piena Olbaltumvielu ekstrakts, Cucumis Melo, piena substrāts,
-              Lactoferrin-NFQ®, Apo Lactoferrin-NFQ®, Aloe Barbadensis lapu pulveris.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-              aria-expanded="false" aria-controls="collapseThree">
-              Brīdinājums par alerģiju
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              Produkti satur piena daļiņas. Ja nepieciešams, pirms
-              lietošanas konsultēties ar ārstu.
-            </div>
-          </div>
-        </div>
-      </div>
+        <div class="o-product o-mt-5 o-mb-5">
+            <div class="o-row">
+                <div class="o-col-md-6 o-about-image">
+                    <img src="./assets/asset_4.png" width="40%" class="img-fluid" alt="AnOxident balance mutes Gēls">
+                </div>
+                <div class="o-col-md-6 o-about-product">
+                    <div class="o-container">
+                        <h2>AnOxident balance skalojamais līdzeklis <p class="o-line"></p>
+                        </h2>
 
-      <div class="row mt-5">
-        <h1>Galvenās īpašības <p class="line" style="background-color: #5C82B7"></p></h1>
-        <div class="col-md-12 mt-4">
-          <ul>
-            <li><b>AnOxident balance®</b> ir unikāla un vienīgā produktu līnija mutes veselībai, kas īpaši paredzēta personām ar diabētu un
-            tiem,
-            kuriem ikdienā patīk našķoties ar saldumiem.</li>
-            <li><b>AnOxident balance®</b> sastāv no bioaktīviem augu un piena atvasinājumiem, kas veidoti, lai maksimāli atdarinātu un
-            pastiprinātu
-            mutes dabiskos aizsargmehānismus.</li>
-            <li><b>Sastāvā esošie Lactoferrin-NFQ® un APO Lactoferrin-NFQ®</b>, kas iegūti no nepasterizēta piena, nodrošina augstu pret
-            mikrobu
-            un antioksidantu mijiedarbību.</li>
-            <li><b>Cucumis Melo</b> ir efektīvs superoksīda dismutāzes (SOD) avots, kas iegūts no melones. Pētījumos pierādīts, ka Cucumis Melo
-            ir
-            efektīvs pret iekaisumu un spēcīgs antioksidants.
-            </li>
-            <li><b>Piena olbaltumvielu ekstrakts (MPE ™)</b> regulē mutes pH līmeni un veido barjeru, lai mutē neuzkrātos siekalu glikozes
-            atlikumi.
-            </li>
-            <li><b>DUOX sistēma</b> darbojas kā barjera ūdeņraža peroksīda neitralizēšanai, ko izraisa pārmērīga siekalu glikoze. Ja ūdeņraža
-            peroksīds netiek kontrolēts, tas var izraisīt kaitīgu, skābu perorālo vidi, kas veicina nevēlamu baktēriju uzkrāšanos
-            mutē.</li>
-            <li><b>Ksilīts</b> ir zobiem draudzīgs, nerūgstošs cukura spirts, kas klīniski pierādīts kā vērtīgs papildinājums profilaktiskajā
-            zobārstniecībā.</li>
-          </ul>
+                        <p><b>- AnOxident balance® ir īpaši piemērots personām ar diabētu un tiem, kuriem
+                                ikdienā patīk našķoties ar saldumiem.</b></p>
+                        
+                        <p><b> - AnOxident balance® mutes skalojamā sastāvā nav spirts, tāpēc tam piemīt
+                                maiga un neitrāla garša, kas neizraisa kodīgu sajūtu mutē.</b></p>
+                        
+                        <p><b> - AnOxident balance® mutes skalojamais līdzeklis regulē un samazina cukura
+                                līmeni siekalās, iznīcina mutē kaitīgās baktērijas un neļauj veidoties zobu
+                                aplikumam un kariesam.</b></p>
+
+                        <br>
+                        <a href="#" type="button" class="o-btn">PĒRC TAGAD</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="o-accordion" id="accordionExample">
+            <div class="o-accordion-item">
+                <h2 class="o-acc-first">Lietošanas norādījumi</h2>
+                <div class="o-accordion-body o-text-center">
+                    - Pēc zobu tīrīšanas ar AnOxident balance® zobu pastu
+                    izskalojiet muti ar AnOxident balance® mutes skalojamo šķīdumu. Drīkst
+                    atkārtoti skalot jebkurā diennakts laikā, lai iegūtu maksimālu mutes
+                    svaigumu un komfortu. Lieko šķīduma daudzumu izspļaut. Neskalot muti ar
+                    ūdeni!
+                </div>
+            </div>
+            <div class="o-accordion-item">
+                <h2 class="o-acc-second">
+                    Sastāvs
+                </h2>
+
+                <div class="o-accordion-body o-text-center">
+                    Ksilīts, Nātrija mono-fluorfosfāts 1,14% w / w (1500 ppm fluora
+                    jonu), piena Olbaltumvielu ekstrakts, Cucumis Melo, piena substrāts,
+                    Lactoferrin-NFQ®, Apo Lactoferrin-NFQ®, Aloe Barbadensis lapu pulveris.
+                </div>
+            </div>
+            <div class="o-accordion-item">
+                <h2 class="o-acc-third">
+                    Brīdinājums par alerģiju
+                </h2>
+                <div class="o-accordion-body o-text-center">
+                    Produkti satur piena daļiņas. Ja nepieciešams, pirms
+                    lietošanas konsultēties ar ārstu.
+                </div>
+            </div>
+        </div>
+
+        <div class="o-row-col o-mt-8">
+            <h1>Galvenās īpašības <p class="o-line" style="background-color: #5C82B7;"></p>
+            </h1>
+            <div class="o-col-md-12 o-mt-4">
+                <ul>
+                    <li><b>AnOxident balance®</b> ir unikāla un vienīgā produktu līnija mutes veselībai, kas īpaši paredzēta personām ar
+                        diabētu un
+                        tiem,
+                        kuriem ikdienā patīk našķoties ar saldumiem.</li>
+                    <li><b>AnOxident balance®</b> sastāv no bioaktīviem augu un piena atvasinājumiem, kas veidoti, lai maksimāli
+                        atdarinātu un
+                        pastiprinātu
+                        mutes dabiskos aizsargmehānismus.</li>
+                    <li><b>Sastāvā esošie Lactoferrin-NFQ® un APO Lactoferrin-NFQ®</b>, kas iegūti no nepasterizēta piena, nodrošina
+                        augstu pret
+                        mikrobu
+                        un antioksidantu mijiedarbību.</li>
+                    <li><b>Cucumis Melo</b> ir efektīvs superoksīda dismutāzes (SOD) avots, kas iegūts no melones. Pētījumos pierādīts,
+                        ka Cucumis Melo
+                        ir
+                        efektīvs pret iekaisumu un spēcīgs antioksidants.
+                    </li>
+                    <li><b>Piena olbaltumvielu ekstrakts (MPE ™)</b> regulē mutes pH līmeni un veido barjeru, lai mutē neuzkrātos
+                        siekalu glikozes
+                        atlikumi.
+                    </li>
+                    <li><b>DUOX sistēma</b> darbojas kā barjera ūdeņraža peroksīda neitralizēšanai, ko izraisa pārmērīga siekalu
+                        glikoze. Ja ūdeņraža
+                        peroksīds netiek kontrolēts, tas var izraisīt kaitīgu, skābu perorālo vidi, kas veicina nevēlamu baktēriju
+                        uzkrāšanos
+                        mutē.</li>
+                    <li><b>Ksilīts</b> ir zobiem draudzīgs, nerūgstošs cukura spirts, kas klīniski pierādīts kā vērtīgs papildinājums
+                        profilaktiskajā
+                        zobārstniecībā.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <div class="other-products mt-5 mb-5">
-      <div class="container text-center">
-        <h3>Citi produkti</h3>
-        <div class="row mt-5">
-          <div class="col-md-4">
-            <img src="./assets/asset_3.png" width="20%" class="img-fluid" alt="AnOxident balance ZOBU PASTA">
-            <h4>AnOxident balance ZOBU PASTA</h4>
-            <a href="#" type="button" class="btn btn-outline-secondary">PĒRC TAGAD</a>
-          </div>
-          <div class="col-md-4">
-            <img src="./assets/asset_2.png" width="25%" class="img-fluid" alt="AnOxident balance skalojamais līdzeklis">
-            <h4>AnOxident balance mutes Gēls</h4>
-            <a href="#" type="button" class="btn btn-outline-secondary">PĒRC TAGAD</a>
-          </div>
-          <div class="col-md-4">
-            <img src="./assets/asset_5.png" width="25%" class="img-fluid" alt="AnOxident balance mutes Aerosols">
-            <h4>AnOxident balance mutes Aerosols</h4>
-            <a href="#" type="button" class="btn btn-outline-secondary">PĒRC TAGAD</a>
-          </div>
+    <div class="o-other-products o-mt-5 o-mb-5">
+        <div class="o-container o-text-center">
+            <h2>Citi produkti</h2>
+            <div class="o-row o-mt-5">
+                <div class="o-col-md-4">
+                    <img src="./assets/asset_3.png" width="20%" class="img-fluid" alt="AnOxident balance ZOBU PASTA">
+                    <h4>AnOxident balance ZOBU PASTA</h4>
+                    <a href="#" type="button" class="o-btn o-btn-outline-secondary">PĒRC TAGAD</a>
+                </div>
+                <div class="o-col-md-4">
+                    <img src="./assets/asset_2.png" width="25%" class="img-fluid"
+                        alt="AnOxident balance skalojamais līdzeklis">
+                    <h4>AnOxident balance mutes Gēls</h4>
+                    <a href="#" type="button" class="o-btn o-btn-outline-secondary">PĒRC TAGAD</a>
+                </div>
+                <div class="o-col-md-4">
+                    <img src="./assets/asset_5.png" width="25%" class="img-fluid"
+                        alt="AnOxident balance mutes Aerosols">
+                    <h4>AnOxident balance mutes Aerosols</h4>
+                    <a href="#" type="button" class="o-btn o-btn-outline-secondary">PĒRC TAGAD</a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>
