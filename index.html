@@ -58,23 +58,38 @@
       .o-acc-first {
         text-align: center;
         background-color: rgb(23,162,184, 0.3);
-        padding: 20px;
+        padding: 10px;
       }
       .o-acc-second {
         text-align: center;
         background-color: rgb(108,117,125, 0.3);
-        padding: 20px;
+        padding: 10px;
       }
       .o-acc-third {
         text-align: center;
         background-color: rgb(220,53,69, 0.3);
-        padding: 20px;
+        padding: 10px;
       }
       .o-accordion {
         display: flex;
       }
       .o-accordion-item {
-        width: 35%;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 30px;
+        width: 100%;
+        background-color: aliceblue;
+      }
+      @media only screen and (max-width: 1024px) {
+        .o-container {
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+        .o-about-product {
+          padding-top: 30px;
+          padding-bottom: 30px;
+          margin-top: 10px;
+        }
       }
        @media only screen and (max-width: 800px) {
          .o-container {
@@ -100,7 +115,9 @@
           flex-direction: column;
         }
         .o-accordion-item {
-          width: 100%;
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-bottom: 20px;
         }
         .o-about-product {
           padding-top: 50px;
@@ -109,7 +126,10 @@
         }
         .o-other-products .col-md-4 {
             margin-top: 50px;
-          }
+        }
+        .ms-2 {
+          margin-top: 40px;
+        }
       }
       .o-product {
         display: flex;
@@ -273,12 +293,12 @@
             <h4>AnOxident balance ZOBU PASTA</h4>
             <a href="#" type="button" class="o-btn o-btn-outline-secondary">PĒRC TAGAD</a>
           </div>
-          <div class="o-col-md-4">
+          <div class="o-col-md-4 ms-2">
             <img src="./assets/asset_4.png" width="25%" class="img-fluid" alt="AnOxident balance skalojamais līdzeklis">
             <h4>AnOxident balance skalojamais līdzeklis</h4>
             <a href="#" type="button" class="o-btn o-btn-outline-secondary">PĒRC TAGAD</a>
           </div>
-          <div class="o-col-md-4">
+          <div class="o-col-md-4 ms-2">
             <img src="./assets/asset_5.png" width="25%" class="img-fluid" alt="AnOxident balance mutes Aerosols">
             <h4>AnOxident balance mutes Aerosols</h4>
             <a href="#" type="button" class="o-btn o-btn-outline-secondary">PĒRC TAGAD</a>
